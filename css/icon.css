@@ -2,7 +2,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 85%;
     padding: 20px;
 }
 
@@ -10,7 +10,7 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 40%;
+    width: 50%;
     margin-right: 10px;
 }
 
@@ -30,12 +30,12 @@
 
 .card-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     max-width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .card {
@@ -45,7 +45,7 @@
     width: calc(33.33% - 20px);
     display: flex;
     overflow: hidden;
-    min-width: 350px;
+    min-width: 300px;
     transition: opacity 0.3s ease;
 }
 
