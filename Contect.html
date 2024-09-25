@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Files । Contect Us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="shortcup icon" type="image/ico" href="img/favicon/SH1-favicon.png">
+    <!-- font aewsome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-------Custom css code------->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/contect.css">
+
+</head>
+
+<body>
+    <!------Nav Start------>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">Collection Files</a>
+        </div>
+        <button class="toggle-button" onclick="toggleNav()">☰</button>
+        <button class="close-button" onclick="toggleNav()">✕</button>
+        <ul class="nav-links">
+            <li>
+                <a href="icon.html">Icon</a>
+            </li>
+            <li>
+                <a href="#Software">Software</a>
+                <div class="dropdown">
+                    <a href="software.html">All Software</a>
+                    <a href="themes.html">Desktop Themes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#about">Mobile App</a>
+                <div class="dropdown">
+                    <a href="premiumapk.html">Premium Apk</a>
+                    <a href="earningapk.html">Earning Apk</a>
+                </div>
+            </li>
+            <li>
+                <a href="#contact" onclick="toggleFontSubMenu(event)">Font</a>
+                <div class="dropdown">
+                    <a href="#subcontact1" onclick="toggleNestedMenu(event)">Bangla Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu1">
+                        <a href="bsfont.html">Bangla Style Font</a>
+                        <a href="brfont.html">Bangla Raguler Font</a>
+                        <a href="bsyfont.html">Bangla Symble Font</a>
+                    </div>
+                    <a href="#subcontact2" onclick="toggleNestedMenu(event)">English Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu2">
+                        <a href="Esfont.html">English Style Font</a>
+                        <a href="Erfont.html">English Raguler Font</a>
+                        <a href="Esyfont.html">English Symble Font</a>
+                    </div>
+                    <a href="#subcontact3" onclick="toggleNestedMenu(event)">Aribic Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu3">
+                        <a href="arfont.html">Aribic Raguler Font</a>
+                        <a href="#">------</a>
+                        <a href="#">------</a>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <a href="#blog">Movie</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="#portfolio">Ai Tools</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="Contect.html">Contect</a>
+            </li>
+        </ul>
+    </nav>
+    <!------Nav End------>
+    <!----body----->
+
+
+
+
+
+
+
+
+
+
+    <!-- Contect Indo Section Start -->
+    <section class="Container">
+        <h1 class="heading" id="contect"><span>Contect Us</span></h1>
+        <div class="content">
+            <div class="left-side">
+                <div class="address details">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="topic">Address</div>
+                    <div class="text-one"> Bangladesh </div>
+                    <div class="text-two"> Dhaka </div>
+                </div>
+                <div class="phone details">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <div class="text-one"> +880 1796 696628 </div>
+                    <div class="text-two"> +880 1550 038782 </div>
+                </div>
+                <div class="email details">
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <div class="text-one"> rovershojol@gmail.com </div>
+                    <div class="text-two"> shojolhossain016@gmail.com </div>
+                </div>
+                <div class="website details">
+                    <i class="fas fa-globe"></i>
+                    <div class="topic">Website</div>
+                    <div class="text-one"> shozolhossain.netlify.app </div>
+                    <div class="text-two"> scoutbooks.netlify.app </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="topic-text">Send us a Message</div>
+                <p> If you have any work from me or amy types of quries reloted to my tutoriol, you can send me message
+                    from here. It's my pleasure to help you.</p>
+                <form name="contect-form" method="POST" data-netlify="ture" onsubmit="submit">
+                    <div class="input-box">
+                        <input type="text" name="text" id="text" placeholder="Enter you name">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="email" id="email" placeholder="Enter you email">
+                    </div>
+                    <div class="input-box message-box">
+                        <textarea name="messages" id="messages" placeholder="MESSAGES"></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Send Now">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Green Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>Providing exceptional services to help businesses grow and succeed.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Quick Links 2</h2>
+                <ul>
+                    <li><a href="#">Link A</a></li>
+                    <li><a href="#">Link B</a></li>
+                    <li><a href="#">Link C</a></li>
+                    <li><a href="#">Link D</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2>Subscribe</h2>
+                <div class="subscribe">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!------ Java Script---------->
+    <script src="js/nav.js">   </script>
+</body>
+
+</html>

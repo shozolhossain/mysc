@@ -1,0 +1,473 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: left;
+    background-position: left;
+    /* Background starts from right */
+    background-size: 80% 100%;
+    /* Cover the entire area */
+    transition: background-position 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    background-position: left;
+    /* Background moves from right to left on hover */
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown a,
+.nested-dropdown a {
+    padding: 12px 16px;
+    display: block;
+    color: white;
+    text-align: left;
+}
+
+.dropdown a:hover,
+.nested-dropdown a:hover {
+    background-color: #575757;
+}
+
+.nav-links li:hover .dropdown {
+    display: block;
+    /* Show dropdown on hover */
+}
+
+/* Nested Dropdown */
+.nested-dropdown {
+    display: none;
+    /* Hide by default */
+    background-color: #444;
+    /* Change background for nested dropdown */
+    position: relative;
+    /* Keep it in the same flow */
+    margin-top: 5px;
+    /* Add some spacing above */
+}
+
+.nested-dropdown.active {
+    display: block;
+    /* Show when active */
+}
+
+/* Mobile Styles */
+.toggle-button {
+    display: none;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-button {
+    display: none;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #4CAF50;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .close-button.active {
+        display: block;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown a {
+        padding-left: 30px;
+    }
+}
+
+/*futter*/
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+footer {
+    background-color: #004d40;
+    color: #fff;
+    height: auto;
+    padding: 30px 0;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #80e27e;
+}
+
+.footer-column p,
+.footer-column ul {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #80e27e;
+}
+
+.subscribe {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.subscribe input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    margin-right: 5px;
+}
+
+.subscribe button {
+    padding: 15px 25px;
+    background-color: #80e27e;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.subscribe button:hover {
+    background-color: #66bb6a;
+}
+
+.social-icons {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    padding: 5px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #80e27e;
+}
+
+.footer-bottom {
+    font-size: 15px;
+    color: #c7c7c7;
+    padding-top: 10px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .subscribe {
+        text-align: center;
+    }
+
+    .subscribe input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .subscribe button {
+        width: 90%;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-column h2 {
+        font-size: 18px;
+    }
+
+    .footer-column p,
+    .footer-column ul {
+        font-size: 12px;
+    }
+}
+
+
+/*-----Diagram-----*/
+.diagram-container {
+    text-align: center;
+    align-items: center;
+    background-color: #f5f3f3;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    color: #343a40;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.controls button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.diagram {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, .7fr));
+    gap: 10px;
+    margin: 10px;
+}
+
+.diagram .box {
+    background-color: #004d40;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid transparent;
+}
+
+.diagram .box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-color: #45a049;
+}
+
+.diagram .box a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .arrow {
+    border: solid #4CAF50;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.box.expanded .arrow {
+    transform: rotate(-135deg);
+}
+
+.sub-items {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    list-style-type: none;
+    padding: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.box.expanded .sub-items {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub-items li {
+    padding: 5px 0;
+    transition: opacity 0.3s ease;
+}
+
+.sub-items li a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.sub-items li a:hover {
+    text-decoration: underline;
+    color: #45a049;
+}
+
+/* Mobile Styles */
+@media (max-width: 740px) {
+    .diagram {
+        grid-template-columns: repeat(2, .8fr);
+        /* Set to 2 columns in mobile view */
+    }
+
+    body {
+        font-size: 12px;
+        /* Smaller font size */
+    }
+
+    h1 {
+        font-size: 22px;
+        /* Smaller heading size */
+    }
+
+    .controls button {
+        padding: 8px 12px;
+        /* Adjust button padding */
+    }
+
+    .diagram .box {
+        padding: 5px;
+        /* Adjust box padding */
+    }
+
+    .sub-items li {
+        padding: 4px 0;
+        /* Adjust sub-items padding */
+    }
+}

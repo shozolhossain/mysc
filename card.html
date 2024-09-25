@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কার্ড ডিজাইন</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 100px;
+            /* ডিফল্ট বডির প্যাডিং */
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+            /* সার্চ বক্স ও কার্ডের মাঝে ফাঁকা জায়গা */
+            text-align: center;
+            /* সার্চ বক্স সেন্টার করা */
+        }
+
+        .search-box {
+            padding: 10px;
+            width: 50%;
+            /* সার্চ বক্সের প্রস্থ 50% */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            /* সবুজ রঙ */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            /* অ্যানিমেশন */
+        }
+
+        .search-button:hover {
+            background-color: #218838;
+            /* হোভার করলে গা darker সবুজ */
+            transform: scale(1.05);
+            /* হোভার করলে স্কেল */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: stretch;
+            /* কার্ডের উচ্চতা অনুযায়ী এলাইনমেন্ট */
+            background-color: #fff;
+            width: 100%;
+            /* কার্ডের প্রস্থ 100% */
+        }
+
+        .card-img {
+            width: 120px;
+            /* ছবির প্রস্থ */
+            height: 100%;
+            /* কার্ডের উচ্চতা অনুযায়ী ছবি লম্বা হবে */
+            border-radius: 8px 0 0 8px;
+            /* কোণার গোলাকার */
+            padding: 8px;
+            /* ছবির প্যাডিং */
+            box-sizing: border-box;
+            /* প্যাডিংয়ের কারণে ছবির আকার পরিবর্তন না হয় */
+            object-fit: cover;
+            /* ছবির আকার বজায় রাখে */
+            border: 2px solid #ddd;
+            /* ছবির চারপাশে বর্ডার */
+        }
+
+        .card-content {
+            padding: 16px;
+            flex: 1;
+            /* লেখাকে বাকি জায়গা পূরণ করতে দেয় */
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            /* ডিফল্ট হেডিংয়ের আকার */
+            margin: 10px 0;
+        }
+
+        .card-details {
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .star-rating {
+            margin: 10px 0;
+            color: gold;
+        }
+
+        .card-button {
+            padding: 8px 16px;
+            background-color: #28a745;
+            /* সবুজ রঙ */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            /* ব্যাকগ্রাউন্ড এবং স্কেল অ্যানিমেশন */
+        }
+
+        .card-button:hover {
+            background-color: #218838;
+            /* হোভার করলে গা darker সবুজ */
+            transform: scale(1.05);
+            /* হোভার করলে স্কেল */
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+            /* প্রাথমিকভাবে লুকানো */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                /* মোবাইলে বডির প্যাডিং 10px */
+            }
+
+            .search-box {
+                width: 70%;
+                /* মোবাইলে সার্চ বক্সের প্রস্থ */
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                flex-direction: row;
+                /* মোবাইলে ছবি ও লেখা এক পাশে থাকবে */
+                width: 90%;
+                /* মোবাইলে কার্ডের প্রস্থ 90% */
+                margin: 0 auto;
+                /* মাঝখানে সেন্টার করার জন্য */
+            }
+
+            .card-img {
+                width: 40%;
+                /* ছবির প্রস্থ মোবাইলে */
+                height: auto;
+                /* উচ্চতা অটোমেটিক হবে */
+                border-radius: 8px 0 0 8px;
+                /* কোণার গোলাকার */
+                border: 2px solid #ddd;
+                /* ছবির চারপাশে বর্ডার */
+            }
+
+            .card-content {
+                flex: 1;
+                /* লেখার অংশ বাকি জায়গা পূরণ করবে */
+            }
+
+            .card-title {
+                font-size: 1.2em;
+                /* মোবাইলে হেডিংয়ের আকার একটু ছোট করা হলো */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="সার্চ করুন..." id="search-input" oninput="searchCards()">
+        <button class="search-button" onclick="searchCards()">সার্চ</button>
+    </div>
+
+    <div class="error-message" id="error-message">আপনার অনুসন্ধান করা তথ্যটি পাওয়া যায়নি | The information was not found
+    </div>
+
+    <div class="container" id="card-container">
+        <div class="card">
+            <img src="https://via.placeholder.com/120x150" alt="Image" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">হেডিং ১</h2>
+                <p class="card-details">এখানে বিষয়বস্তুর বিস্তারিত তথ্য দেওয়া হয়েছে। এটি একাধিক লাইনে থাকতে পারে।</p>
+                <div class="star-rating">★★★★☆</div>
+                <button class="card-button">বাটন ১</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/120x150" alt="Image" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">হেডিং ২</h2>
+                <p class="card-details">এখানে দ্বিতীয় বিষয়বস্তুর বিস্তারিত তথ্য দেওয়া হয়েছে। এটি আরো লম্বা হতে পারে।
+                </p>
+                <div class="star-rating">★★★☆☆</div>
+                <button class="card-button">বাটন ২</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/120x150" alt="Image" class="card-img">
+            <div class="card-content">
+                <h2 class="card-title">হেডিং ৩</h2>
+                <p class="card-details">এখানে তৃতীয় বিষয়বস্তুর বিস্তারিত তথ্য দেওয়া হয়েছে।</p>
+                <div class="star-rating">★★★★★</div>
+                <button class="card-button">বাটন ৩</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchCards() {
+            const input = document.getElementById('search-input').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            const errorMessage = document.getElementById('error-message');
+            let found = false;
+
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').innerText.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = 'flex'; // কার্ডটি প্রদর্শন করুন
+                    found = true; // কমপক্ষে একটি কার্ড পাওয়া গেছে
+                } else {
+                    card.style.display = 'none'; // কার্ডটি লুকান
+                }
+            });
+
+            // যদি কোনো কার্ড না পাওয়া যায়
+            if (!found && input) {
+                errorMessage.style.display = 'block'; // ত্রুটি বার্তা প্রদর্শন করুন
+            } else {
+                errorMessage.style.display = 'none'; // ত্রুটি বার্তা লুকান
+            }
+
+            // যদি সার্চ বক্স খালি থাকে, সব কার্ড দেখান
+            if (input === "") {
+                cards.forEach(card => card.style.display = 'flex');
+                errorMessage.style.display = 'none'; // ত্রুটি বার্তা লুকান
+            }
+        }
+    </script>
+
+</body>
+
+</html>

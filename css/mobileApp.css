@@ -1,0 +1,160 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin: 20px;
+    flex-direction: row;
+}
+
+.search-box {
+    width: 40%;
+    /* Adjust as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    /* Space between search box and button */
+}
+
+.search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-button:hover {
+    background-color: darkgreen;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+    display: none;
+    /* Hidden by default */
+    text-align: center;
+    /* Center align the text */
+    font-weight: bold;
+    /* Make it bold */
+    border: 1px solid red;
+    /* Add border */
+    padding: 10px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Round the corners */
+    background-color: #f8d7da;
+    /* Light red background */
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: auto;
+    width: 30%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.card-image {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.card-content {
+    flex-grow: 1;
+    width: 50%;
+    padding-right: 10px;
+}
+
+.card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    /* Adjust as needed */
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    /* Remove underline */
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: darkgreen;
+}
+
+/* Mobile view */
+@media (max-width: 740px) {
+    .search-box {
+        width: 60%;
+        /* Adjusted width for mobile */
+    }
+
+    .search-button {
+        width: 20%;
+        /* Adjusted width for mobile */
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px auto;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-image {
+        width: 30%;
+    }
+
+    .card-content {
+        width: 60%;
+        text-align: left;
+
+    }
+
+    .card-content h3 {
+        font-size: 1.2em;
+        /* Smaller heading size */
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+        /* Smaller paragraph size */
+    }
+
+    .card-button {
+        width: 10%;
+        align-self: center;
+    }
+
+    /* Hide the text on the button in mobile view */
+    @media (max-width: 740px) {
+        .card-button span {
+            display: none;
+            /* Hide the text */
+        }
+    }
+}

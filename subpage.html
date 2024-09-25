@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Nested Dropdowns</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <!-------Custom css code------->
+    <link rel="stylesheet" href="css/nav.css">
+
+</head>
+
+<body>
+    <!------Nav Start------>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">Collection Files</a>
+        </div>
+        <button class="toggle-button" onclick="toggleNav()">☰</button>
+        <button class="close-button" onclick="toggleNav()">✕</button>
+        <ul class="nav-links">
+            <li>
+                <a href="icon.html">Icon</a>
+            </li>
+            <li>
+                <a href="#Software">Software</a>
+                <div class="dropdown">
+                    <a href="software.html">All Software</a>
+                    <a href="themes.html">Desktop Themes</a>
+                </div>
+            </li>
+            <li>
+                <a href="#about">Mobile App</a>
+                <div class="dropdown">
+                    <a href="premiumapk.html">Premium Apk</a>
+                    <a href="earningapk.html">Earning Apk</a>
+                </div>
+            </li>
+            <li>
+                <a href="#contact" onclick="toggleFontSubMenu(event)">Font</a>
+                <div class="dropdown">
+                    <a href="#subcontact1" onclick="toggleNestedMenu(event)">Bangla Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu1">
+                        <a href="bsfont.html">Bangla Style Font</a>
+                        <a href="brfont.html">Bangla Raguler Font</a>
+                        <a href="bsyfont.html">Bangla Symble Font</a>
+                    </div>
+                    <a href="#subcontact2" onclick="toggleNestedMenu(event)">English Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu2">
+                        <a href="Esfont.html">English Style Font</a>
+                        <a href="Erfont.html">English Raguler Font</a>
+                        <a href="Esyfont.html">English Symble Font</a>
+                    </div>
+                    <a href="#subcontact3" onclick="toggleNestedMenu(event)">Aribic Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu3">
+                        <a href="arfont.html">Aribic Raguler Font</a>
+                        <a href="#">------</a>
+                        <a href="#">------</a>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <a href="#blog">Movie</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="#portfolio">Ai Tools</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="Contect.html">Contect</a>
+            </li>
+        </ul>
+    </nav>
+    <!------Nav End------>
+    <!----body----->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Diagran Section -->
+    <div class="diagram-container">
+        <h1>Collection Files</h1>
+
+        <div class="controls">
+            <button id="toggleExpand">Expand All</button>
+        </div>
+
+        <div class="diagram">
+            <div class="box">
+                <a href="#">Icon <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li><a href="#">1. Icon list</a></li>
+                    <li><a href="#">2. One Click</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <a href="#">Software <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li><a href="#">1. All Software</a></li>
+                    <li><a href="#">2. Themes</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <a href="#">Mobile App <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li><a href="#">1. Premium Apk</a></li>
+                    <li><a href="#">2. Earning Apk</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <a href="#">Font <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li>
+                        <a href="#">1. Bangla Font </a>
+                        <ul class="sub-items">
+                            <li><a href="#">1. Bangla Style Font</a></li>
+                            <li><a href="#">2. Bangla Regular Font</a></li>
+                            <li><a href="#">3. Bangla Symbol Font</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">2. English Font </a>
+                        <ul class="sub-items">
+                            <li><a href="#">1. English Style Font</a></li>
+                            <li><a href="#">2. English Regular Font</a></li>
+                            <li><a href="#">3. English Symbol Font</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">3. Arabic Font</a>
+                        <ul class="sub-items">
+                            <li><a href="#">3. Arabic Regular Font</a></li>
+                            <li><a href="#">3. English Style Font</a></li>
+                            <li><a href="#">3. English Symbol Font</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="box">
+                <a href="#">Movie <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li><a href="#">1. Link-1</a></li>
+                    <li><a href="#">2. Link-2</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <a href="#">AI Tools <span class="arrow"></span></a>
+                <ul class="sub-items">
+                    <li><a href="#">1. Link-1</a></li>
+                    <li><a href="#">2. Link-2</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Green Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>Providing exceptional services to help businesses grow and succeed.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Subscribe</h2>
+                <div class="subscribe">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!------ Java Script---------->
+    <script src="js/nav.js">   </script>
+</body>
+
+</html>

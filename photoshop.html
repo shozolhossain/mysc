@@ -1,0 +1,492 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Files । Photoshop</title>
+    <link rel="shortcup icon" type="image/ico" href="img/favicon/S-favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <!-------Custom css code------->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/softwarepage.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .soft-card-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .soft-card {
+            display: flex;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 49%;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .soft-card img {
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .soft-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .soft-card-content h2 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .soft-card-content p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .star-icons {
+            font-size: 1.2em;
+            color: gold;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            padding: 10px 20px;
+            background-color: #28a745;
+            /* Default color */
+            color: white;
+            border: none;
+            width: 120px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #218838;
+        }
+
+        .icon-buttons {
+            display: none;
+            margin-top: 10px;
+            justify-content: left;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .icon-buttons.show {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .icon-buttons a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .icon-buttons button {
+            margin-right: 10px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .icon-buttons .download {
+            background-color: #007bff;
+        }
+
+        .icon-buttons .google-drive {
+            background-color: #bb9603;
+        }
+
+        .icon-buttons .terabox {
+            background-color: #4CAF50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .soft-card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .soft-card {
+                width: 100%;
+                flex-direction: column;
+                text-align: left;
+                padding: 10px;
+                /* Set padding for cards in mobile view */
+                margin-bottom: 10px;
+                /* Add spacing between cards */
+            }
+
+            .soft-card img {
+                margin-bottom: 20px;
+                width: 100%;
+                height: auto;
+            }
+
+            .soft-card-content {
+                width: 100%;
+            }
+
+            .icon-buttons {
+                flex-direction: row;
+                /* Display buttons in a row */
+            }
+
+            .icon-buttons button {
+                margin-bottom: 0;
+                /* Remove margin at the bottom */
+            }
+        }
+    </style>
+
+</head>
+
+
+
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">Collection Files</a>
+        </div>
+        <button class="toggle-button" onclick="toggleNav()">☰</button>
+        <button class="close-button" onclick="toggleNav()">✕</button>
+        <ul class="nav-links">
+            <li>
+                <a href="icon.html">Icon</a>
+            </li>
+            <li>
+                <a href="#Software">Software</a>
+                <div class="dropdown">
+                    <a href="#subcontact4" onclick="toggleNestedMenu(event)">Application software</a>
+                    <div class="nested-dropdown" id="nestedMenu4">
+                        <a href="adobephotoshop.html">Photoshop</a>
+                        <a href="brfont.html">illustrator</a>
+                        <a href="bsyfont.html">Camtasia Software</a>
+                        <a href="software.html">Microsoft Office</a>
+                    </div>
+                    <a href="themes.html">Desktop Themes</a>
+                    <a href="themes.html">Desktop Anti</a>
+                    <a href="themes.html">All Activators</a>
+                </div>
+            </li>
+            <li>
+                <a href="#about">Mobile App</a>
+                <div class="dropdown">
+                    <a href="premiumapk.html">Premium Apk</a>
+                    <a href="earningapk.html">Earning Apk</a>
+                </div>
+            </li>
+            <li>
+                <a href="#contact" onclick="toggleFontSubMenu(event)">Font</a>
+                <div class="dropdown">
+                    <a href="#subcontact1" onclick="toggleNestedMenu(event)">Bangla Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu1">
+                        <a href="bsfont.html">Bangla Style Font</a>
+                        <a href="brfont.html">Bangla Raguler Font</a>
+                        <a href="bsyfont.html">Bangla Symble Font</a>
+                    </div>
+                    <a href="#subcontact2" onclick="toggleNestedMenu(event)">English Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu2">
+                        <a href="Esfont.html">English Style Font</a>
+                        <a href="Erfont.html">English Raguler Font</a>
+                        <a href="Esyfont.html">English Symble Font</a>
+                    </div>
+                    <a href="#subcontact3" onclick="toggleNestedMenu(event)">Aribic Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu3">
+                        <a href="arfont.html">Aribic Raguler Font</a>
+                        <a href="#">------</a>
+                        <a href="#">------</a>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <a href="#blog">Movie</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="#portfolio">Ai Tools</a>
+                <div class="dropdown">
+                    <a href="#">সাব-লিঙ্ক 1</a>
+                    <a href="#">সাব-লিঙ্ক 2</a>
+                </div>
+            </li>
+            <li>
+                <a href="Contect.html">Contect</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="soft-card-container">
+        <div class="soft-card">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <div class="card-content">
+                <h2>Card Title 1</h2>
+                <p>This is a sample paragraph for the card content.</p>
+                <p>Password: 152451</p>
+                <div class="star-icons">★★★★☆</div>
+                <button class="read-more" onclick="toggleIcons(this)">Read More</button>
+                <div class="icon-buttons">
+                    <button class="download">
+                        <a href="https://example.com/download" target="_blank">
+                            <i class="fas fa-download"></i></a>
+                    </button>
+                    <button class="google-drive">
+                        <a href="https://drive.google.com/" target="_blank">
+                            <i class="fab fa-google-drive"></i></a>
+                    </button>
+                    <button class="terabox">
+                        <a href="https://www.terabox.com/" target="_blank">
+                            <i class="fas fa-box"></i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="soft-card">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <div class="card-content">
+                <h2>Card Title 1</h2>
+                <p>This is a sample paragraph for the card content.</p>
+                <p>Password: 152451</p>
+                <div class="star-icons">★★★★☆</div>
+                <button class="read-more" onclick="toggleIcons(this)">Read More</button>
+                <div class="icon-buttons">
+                    <button class="download">
+                        <a href="https://example.com/download" target="_blank">
+                            <i class="fas fa-download"></i></a>
+                    </button>
+                    <button class="google-drive">
+                        <a href="https://drive.google.com/" target="_blank">
+                            <i class="fab fa-google-drive"></i></a>
+                    </button>
+                    <button class="terabox">
+                        <a href="https://www.terabox.com/" target="_blank">
+                            <i class="fas fa-box"></i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="soft-card-container">
+        <div class="soft-card">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <div class="card-content">
+                <h2>Card Title 1</h2>
+                <p>This is a sample paragraph for the card content.</p>
+                <p>Password: 152451</p>
+                <div class="star-icons">★★★★☆</div>
+                <button class="read-more" onclick="toggleIcons(this)">Read More</button>
+                <div class="icon-buttons">
+                    <button class="download">
+                        <a href="https://example.com/download" target="_blank">
+                            <i class="fas fa-download"></i></a>
+                    </button>
+                    <button class="google-drive">
+                        <a href="https://drive.google.com/" target="_blank">
+                            <i class="fab fa-google-drive"></i></a>
+                    </button>
+                    <button class="terabox">
+                        <a href="https://www.terabox.com/" target="_blank">
+                            <i class="fas fa-box"></i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="soft-card">
+            <img src="https://via.placeholder.com/300" alt="Image 1">
+            <div class="card-content">
+                <h2>Card Title 1</h2>
+                <p>This is a sample paragraph for the card content.</p>
+                <p>Password: 152451</p>
+                <div class="star-icons">★★★★☆</div>
+                <button class="read-more" onclick="toggleIcons(this)">Read More</button>
+                <div class="icon-buttons">
+                    <button class="download">
+                        <a href="https://example.com/download" target="_blank">
+                            <i class="fas fa-download"></i></a>
+                    </button>
+                    <button class="google-drive">
+                        <a href="https://drive.google.com/" target="_blank">
+                            <i class="fab fa-google-drive"></i></a>
+                    </button>
+                    <button class="terabox">
+                        <a href="https://www.terabox.com/" target="_blank">
+                            <i class="fas fa-box"></i></a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="diagram-container"></div>
+    <h1>Collection Files</h1>
+
+    <div class="controls">
+        <button id="toggleExpand">Expand All</button>
+    </div>
+
+    <div class="diagram">
+        <div class="box">
+            <a href="#">Icon <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li><a href="icon.html">1. Icon list</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <a href="#">Software <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li><a href="software.html">1. Application Software</a></li>
+                <li><a href="themes.html">1. Photoshop</a></li>
+                <li><a href="themes.html">2. illustrator</a></li>
+                <li><a href="themes.html">3. Camtasia Software</a></li>
+                <li><a href="themes.html">4. Microsoft Office</a></li>
+                <li><a href="themes.html">2. Application Software</a></li>
+                <li><a href="themes.html">3. Themes</a></li>
+                <li><a href="themes.html">4. anti</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <a href="#">Mobile App <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li><a href="premiumapk.html">1. Premium Apk</a></li>
+                <li><a href="earningapk.html">2. Earning Apk</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <a href="#">Font <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li>
+                    <a href="#">1. Bangla Font </a>
+                    <ul class="sub-items">
+                        <li><a href="bsfont.html">1. Bangla Style Font</a></li>
+                        <li><a href="brfont.html">2. Bangla Regular Font</a></li>
+                        <li><a href="bsyfont.html">3. Bangla Symbol Font</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">2. English Font </a>
+                    <ul class="sub-items">
+                        <li><a href="Esfont.html">1. English Style Font</a></li>
+                        <li><a href="Erfont.html">2. English Regular Font</a></li>
+                        <li><a href="Esyfont.html">3. English Symbol Font</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">3. Arabic Font</a>
+                    <ul class="sub-items">
+                        <li><a href="arfont.html">3. Arabic Regular Font</a></li>
+                        <li><a href="#">3. English Style Font</a></li>
+                        <li><a href="#">3. English Symbol Font</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="box">
+            <a href="#">Movie <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li><a href="#">1. Link-1</a></li>
+                <li><a href="#">2. Link-2</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <a href="#">AI Tools <span class="arrow"></span></a>
+            <ul class="sub-items">
+                <li><a href="#">1. Link-1</a></li>
+                <li><a href="#">2. Link-2</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <!-- Green Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>Providing exceptional services to help businesses grow and succeed.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Quick Links</h2>
+                <ul>
+
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Subscribe</h2>
+                <div class="subscribe">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © Md Shozol Hossain. All rights reserved-2024</p>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        function toggleIcons(button) {
+            const iconButtons = button.nextElementSibling;
+            if (iconButtons.classList.contains('show')) {
+                iconButtons.classList.remove('show'); // Remove show class to hide buttons
+                button.textContent = "Read More";
+                button.style.backgroundColor = "#28a745"; // Default color
+            } else {
+                iconButtons.classList.add('show'); // Add show class for animation
+                button.textContent = "Show Less";
+                button.style.backgroundColor = "#dc3545"; // Change to red for "Show Less"
+            }
+        }
+    </script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+/* General Styles */
+.Container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.heading span {
+    color: #2b7a3b;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side {
+    width: 30%;
+    /* Left side 30% */
+    text-align: center;
+    /* Center text */
+}
+
+.right-side {
+    width: 70%;
+    /* Right side 70% */
+}
+
+/* Details Styles */
+.details {
+    margin-bottom: 20px;
+}
+
+.details i {
+    font-size: 24px;
+    color: #2b7a3b;
+    margin-right: 10px;
+}
+
+.topic {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2b7a3b;
+}
+
+.text-one,
+.text-two {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Right Side Styles */
+.right-side .topic-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b7a3b;
+    margin-bottom: 10px;
+}
+
+.right-side p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #2b7a3b;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #777;
+}
+
+.input-box textarea {
+    height: 120px;
+    resize: none;
+}
+
+.button input[type="submit"] {
+    background-color: #2b7a3b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #1e5e2b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .left-side,
+    .right-side {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
