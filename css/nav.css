@@ -439,12 +439,16 @@ h1 {
 .sub-items li a {
     color: #6c757d;
     text-decoration: none;
+    text-align: left;
+    font-size: 14px;
 }
 
 .sub-items li a:hover {
     text-decoration: underline;
     color: #45a049;
 }
+
+
 
 /* Mobile Styles */
 @media (max-width: 740px) {
@@ -477,4 +481,8 @@ h1 {
         padding: 4px 0;
         /* Adjust sub-items padding */
     }
+    .sub-items li a{
+       font-size: 12px;
+    }
+   
 }

@@ -4,170 +4,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Diagram</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            height: 100vh;
-            margin: 0;
-            background-color: #e9ecef;
-            padding: 20px;
-        }
+    <title>Collection Files । Bangla Style Premium Font</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcup icon" type="image/ico" href="img/favicon/F-favicon.png">
+    <!-------Custom css code------->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/bfont.css">
 
-        .diagram-container {
-            text-align: center;
-            background-color: #bbbaba;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 100%;
-            position: relative;
-        }
-
-        h1 {
-            color: #343a40;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .controls {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .controls button {
-            padding: 10px 15px;
-            background-color: #4CAF50;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 0 10px;
-            transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-        }
-
-        .controls button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
-
-        .diagram {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
-
-        .diagram .box {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 2px solid transparent;
-        }
-
-        .diagram .box:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-            border-color: #45a049;
-        }
-
-        .diagram .box a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .box .arrow {
-            border: solid #4CAF50;
-            border-width: 0 2px 2px 0;
-            padding: 4px;
-            transform: rotate(45deg);
-            transition: transform 0.3s ease;
-        }
-
-        .box.expanded .arrow {
-            transform: rotate(-135deg);
-        }
-
-        .sub-items {
-            max-height: 0;
-            overflow: hidden;
-            margin-top: 10px;
-            list-style-type: none;
-            padding: 0;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .box.expanded .sub-items {
-            max-height: 400px;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .sub-items li {
-            padding: 5px 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .sub-items li a {
-            color: #6c757d;
-            text-decoration: none;
-        }
-
-        .sub-items li a:hover {
-            text-decoration: underline;
-            color: #45a049;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 740px) {
-            .diagram {
-                grid-template-columns: repeat(2, .8fr);
-                /* Set to 2 columns in mobile view */
-            }
-
-            body {
-                font-size: 12px;
-                /* Smaller font size */
-            }
-
-            h1 {
-                font-size: 22px;
-                /* Smaller heading size */
-            }
-
-            .controls button {
-                padding: 8px 12px;
-                /* Adjust button padding */
-            }
-
-            .diagram .box {
-                padding: 5px;
-                /* Adjust box padding */
-            }
-
-            .sub-items li {
-                padding: 4px 0;
-                /* Adjust sub-items padding */
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <!------Nav Start------>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color: white; text-decoration: none;">Collection Files</a>
+        </div>
+        <button class="toggle-button" onclick="toggleNav()">☰</button>
+        <button class="close-button" onclick="toggleNav()">✕</button>
+        <ul class="nav-links">
+            <li>
+                <a href="icon.html">Icon</a>
+            </li>
+            <li>
+                <a href="#Software">Software</a>
+                <div class="dropdown">
+                    <a href="#subcontact4" onclick="toggleNestedMenu(event)">Application software</a>
+                    <div class="nested-dropdown" id="nestedMenu4">
+                        <a href="photoshop.html">Photoshop</a>
+                        <a href="illustrator.html">Illustrator</a>
+                        <a href="Camtasia.html">Camtasia Software</a>
+                        <a href="Microsoft-office.html">Microsoft Office</a>
+                    </div>
+                    <a href="themes.html">Desktop Themes</a>
+                    <a href="antivirus.html">Antivirus</a>
+                    <a href="software.html">All Software</a>
+                    <a href="Activators.html">All Activators</a>
+                </div>
+            </li>
+            <li>
+                <a href="#app">Mobile App</a>
+                <div class="dropdown">
+                    <a href="premiumapk.html">Premium Apk</a>
+                    <a href="earningapk.html">Earning Apk</a>
+                </div>
+            </li>
+            <li>
+                <a href="#contact" onclick="toggleFontSubMenu(event)">Font</a>
+                <div class="dropdown">
+                    <a href="#subcontact1" onclick="toggleNestedMenu(event)">Bangla Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu1">
+                        <a href="bsfont.html">Bangla Style Font</a>
+                        <a href="brfont.html">Bangla Raguler Font</a>
+                        <a href="bsyfont.html">Bangla Symble Font</a>
+                    </div>
+                    <a href="#subcontact2" onclick="toggleNestedMenu(event)">English Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu2">
+                        <a href="Esfont.html">English Style Font</a>
+                        <a href="Erfont.html">English Raguler Font</a>
+                        <a href="Esyfont.html">English Symble Font</a>
+                    </div>
+                    <a href="#subcontact3" onclick="toggleNestedMenu(event)">Aribic Fonts</a>
+                    <div class="nested-dropdown" id="nestedMenu3">
+                        <a href="arfont.html">Aribic Raguler Font</a>
+                        <a href="#">------</a>
+                        <a href="#">------</a>
+                    </div>
+
+                </div>
+            </li>
+            <li>
+                <a href="#movie">Movie</a>
+                <div class="dropdown">
+                    <a href="movie-1.html">Movie-1</a>
+                    <a href="movie-2.html">Movie-2</a>
+                </div>
+            </li>
+            <li>
+                <a href="#tools">Ai Tools</a>
+                <div class="dropdown">
+                    <a href="tools-1.html">tools-1</a>
+                    <a href="tools-2.html">tools-2</a>
+                </div>
+            </li>
+            <li>
+                <a href="Contect.html">Contect</a>
+            </li>
+        </ul>
+    </nav>
+    <!------Nav End------>
+    <!----body----->
+
+    <h1>Bangla Style Premium Font</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="ফন্টের নাম লিখে সার্চ করুন..." oninput="searchTable()" />
+        <button id="searchButton" onclick="searchTable()">Search</button>
+    </div>
+
+    <div class="error-message" id="errorMessage">আপনার অনুসন্ধান করা তথ্যটি পাওয়া যায়নি।</div>
+
+    <table id="fontTable">
+        <thead>
+            <tr>
+                <th>SL</th>
+                <th>Font Name</th>
+                <th>Font Style Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>অনন্য বাংলা</td>
+                <td><img src="img/font/bsfont/অনন্য বাংলা.png" alt="অনন্য বাংলা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>আজাদ ফেনী</td>
+                <td><img src="img/font/bsfont/আজাদ ফেনী.png" alt="আজাদ ফেনী"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>আলিনুর নকশি</td>
+                <td><img src="img/font/bsfont/আলিনুর নকশি.png" alt="আলিনুর নকশি"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>কাগজ</td>
+                <td><img src="img/font/bsfont/কাগজ.png" alt="কাগজ"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>কাশফুল</td>
+                <td><img src="img/font/bsfont/কাশফুল.png" alt="কাশফুল"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>চিত্রক</td>
+                <td><img src="img/font/bsfont/চিত্রক.png" alt="চিত্রক"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>নয়ানজুলি</td>
+                <td><img src="img/font/bsfont/নয়ানজুলি.png" alt="নয়ানজুলি"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>বাঁধন বৈশাখী</td>
+                <td><img src="img/font/bsfont/বাঁধন বৈশাখী.png" alt="বাঁধন বৈশাখী"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>মানোয়ার শিমুল</td>
+                <td><img src="img/font/bsfont/মানোয়ার শিমুল.png" alt="মানোয়ার শিমুল"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>লিপি প্রথমা</td>
+                <td><img src="img/font/bsfont/লিপি প্রথমা.png" alt="লিপি প্রথমা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>লিয়াকত আশা</td>
+                <td><img src="img/font/bsfont/লিয়াকত আশা.png" alt="লিয়াকত আশা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>লিয়াকত তেপান্তর</td>
+                <td><img src="img/font/bsfont/লিয়াকত তেপান্তর.png" alt="লিয়াকত তেপান্তর"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>লিয়াকত প্রিয়তমা</td>
+                <td><img src="img/font/bsfont/লিয়াকত প্রিয়তমা.png" alt="লিয়াকত প্রিয়তমা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>শামীম রাহবার</td>
+                <td><img src="img/font/bsfont/শামীম রাহবার.png" alt="শামীম রাহবার"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>সজল শিবাঙ্গীশা</td>
+                <td><img src="img/font/bsfont/সজল শিবাঙ্গীশা.png" alt="সজল শিবাঙ্গীশা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>হাসান কারীম</td>
+                <td><img src="img/font/bsfont/হাসান কারীম.png" alt="হাসান কারীম"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>হাসান কুসুমিতা</td>
+                <td><img src="img/font/bsfont/হাসান কুসুমিতা.png" alt="হাসান কুসুমিতা"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>হেলাল আশিক</td>
+                <td><img src="img/font/bsfont/হেলাল আশিক.png" alt="হেলাল আশিক"></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>--</td>
+                <td><img src="img/font/bsfont/" alt=""></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>--</td>
+                <td><img src="img/font/bsfont/" alt=""></td>
+                <td>
+                    <a href="">
+                        <button class="download-button">
+                            <span class="download-text">Download</span>
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination" id="paginationContainer"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="diagram-container">
         <h1>Collection Files</h1>
@@ -180,22 +409,27 @@
             <div class="box">
                 <a href="#">Icon <span class="arrow"></span></a>
                 <ul class="sub-items">
-                    <li><a href="#">1. Icon list</a></li>
-                    <li><a href="#">2. One Click</a></li>
+                    <li><a href="icon.html">1. Icon list</a></li>
                 </ul>
             </div>
             <div class="box">
                 <a href="#">Software <span class="arrow"></span></a>
                 <ul class="sub-items">
-                    <li><a href="#">1. All Software</a></li>
-                    <li><a href="#">2. Themes</a></li>
+                    <li><a href="software.html">1. Application Software</a></li>
+                    <li><a href="photoshop.html">1. Photoshop</a></li>
+                    <li><a href="illustrator.html">2. illustrator</a></li>
+                    <li><a href="Camtasia.html">3. Camtasia Software</a></li>
+                    <li><a href="Microsoft-office.html">4. Microsoft Office</a></li>
+                    <li><a href="themes.html">2. Desktop Themes</a></li>
+                    <li><a href="antivirus.html">3. Antivirus</a></li>
+                    <li><a href="Activators.html">4. All Activators</a></li>
                 </ul>
             </div>
             <div class="box">
                 <a href="#">Mobile App <span class="arrow"></span></a>
                 <ul class="sub-items">
-                    <li><a href="#">1. Premium Apk</a></li>
-                    <li><a href="#">2. Earning Apk</a></li>
+                    <li><a href="premiumapk.html">1. Premium Apk</a></li>
+                    <li><a href="earningapk.html">2. Earning Apk</a></li>
                 </ul>
             </div>
             <div class="box">
@@ -204,25 +438,25 @@
                     <li>
                         <a href="#">1. Bangla Font </a>
                         <ul class="sub-items">
-                            <li><a href="#">1. Bangla Style Font</a></li>
-                            <li><a href="#">2. Bangla Regular Font</a></li>
-                            <li><a href="#">3. Bangla Symbol Font</a></li>
+                            <li><a href="bsfont.html">1. Bangla Style Font</a></li>
+                            <li><a href="brfont.html">2. Bangla Regular Font</a></li>
+                            <li><a href="bsyfont.html">3. Bangla Symbol Font</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">2. English Font </a>
                         <ul class="sub-items">
-                            <li><a href="#">1. English Style Font</a></li>
-                            <li><a href="#">2. English Regular Font</a></li>
-                            <li><a href="#">3. English Symbol Font</a></li>
+                            <li><a href="Esfont.html">1. English Style Font</a></li>
+                            <li><a href="Erfont.html">2. English Regular Font</a></li>
+                            <li><a href="Esyfont.html">3. English Symbol Font</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">3. Arabic Font</a>
                         <ul class="sub-items">
-                            <li><a href="#">3. Arabic Regular Font</a></li>
-                            <li><a href="#">3. English Style Font</a></li>
-                            <li><a href="#">3. English Symbol Font</a></li>
+                            <li><a href="arfont.html">1. Arabic Regular Font</a></li>
+                            <li><a href="#">2. ----------</a></li>
+                            <li><a href="#">3. ----------</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -230,49 +464,179 @@
             <div class="box">
                 <a href="#">Movie <span class="arrow"></span></a>
                 <ul class="sub-items">
-                    <li><a href="#">1. Link-1</a></li>
-                    <li><a href="#">2. Link-2</a></li>
+                    <li><a href="movie-1.html">1. movie-1</a></li>
+                    <li><a href="movie-2.html">2. movie-2</a></li>
                 </ul>
             </div>
             <div class="box">
                 <a href="#">AI Tools <span class="arrow"></span></a>
                 <ul class="sub-items">
-                    <li><a href="#">1. Link-1</a></li>
-                    <li><a href="#">2. Link-2</a></li>
+                    <li><a href="tools-1.html">1. Tools-1</a></li>
+                    <li><a href="tools-2.html">2. Tools-2</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- Green Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h2>About Us</h2>
+                <p>Providing exceptional services to help businesses grow and succeed.</p>
+            </div>
+            <div class="footer-column">
+                <h2>Quick Links</h2>
+                <ul>
 
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h2>Subscribe</h2>
+                <div class="subscribe">
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <button onclick="subscribe()">Subscribe</button>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © Md Shozol Hossain. All rights reserved-2024</p>
+        </div>
+    </footer>
+
+    <!------ Java Script---------->
+    <script src="js/nav.js">   </script>
+    <script src="js/bfont.js"></script>
     <script>
-        let expanded = false;
+        const rowsPerPage = 10;
+        let currentPage = 1;
 
-        document.querySelectorAll('.box > a').forEach(item => {
-            item.addEventListener('click', event => {
-                const parentBox = item.parentElement;
-                parentBox.classList.toggle('expanded');
-            });
-        });
+        function searchTable() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var table = document.getElementById("fontTable");
+            var tr = table.getElementsByTagName("tr");
+            var errorMessage = document.getElementById("errorMessage");
+            var found = false;
 
-        document.getElementById('toggleExpand').addEventListener('click', () => {
-            expanded = !expanded;
-            document.querySelectorAll('.box').forEach(box => {
-                if (expanded) {
-                    box.classList.add('expanded', expanded);
-                } else {
-                    box.classList.remove('expanded');
+            for (var i = 1; i < tr.length; i++) {
+                var td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    var txtValue = td.textContent || td.innerText;
+                    if (txtValue.toLowerCase().indexOf(input) > -1) {
+                        tr[i].style.display = "";
+                        found = true;
+                    } else {
+                        tr[i].style.display = "none";
+                    }
                 }
-            });
-            // Animate the button text change
-            const button = document.getElementById('toggleExpand');
-            button.classList.add('changing-text');
-            setTimeout(() => {
-                button.textContent = expanded ? 'Collapse All' : 'Expand All';
-                button.classList.remove('changing-text');
-            }, 300); // Match the duration of the animation
-        });
-    </script>
+            }
 
+            if (!found && input !== "") {
+                errorMessage.style.display = "block";
+            } else {
+                errorMessage.style.display = "none";
+            }
+
+            // সিলিয়াল নম্বর আপডেট এবং পেজ আপডেট করা
+            updateSerialNumbers();
+            showPage(1); // সার্চ করলে পেজ ১-এ নিয়ে যাবে
+        }
+
+        function updateSerialNumbers() {
+            const table = document.getElementById("fontTable");
+            const tr = table.getElementsByTagName("tr");
+            let count = 1;
+
+            for (let i = 1; i < tr.length; i++) {
+                if (tr[i].style.display !== "none") {
+                    tr[i].cells[0].textContent = count++;
+                }
+            }
+        }
+
+        function showPage(page) {
+            currentPage = page;
+            const table = document.getElementById("fontTable").getElementsByTagName("tbody")[0];
+            const tr = table.getElementsByTagName("tr");
+
+            let start = (page - 1) * rowsPerPage;
+            let end = start + rowsPerPage;
+            let visibleCount = 0;
+
+            for (let i = 1; i < tr.length; i++) {
+                if (tr[i].style.display !== "none") {
+                    tr[i].style.display = (visibleCount >= start && visibleCount < end) ? "" : "none";
+                    visibleCount++;
+                }
+            }
+
+            updatePagination();
+        }
+
+        function updatePagination() {
+            const paginationContainer = document.getElementById("paginationContainer");
+            const table = document.getElementById("fontTable").getElementsByTagName("tbody")[0];
+            const tr = table.getElementsByTagName("tr");
+
+            let visibleRows = Array.from(tr).filter(row => row.style.display !== "none").length;
+            const totalPages = Math.ceil(visibleRows / rowsPerPage);
+            paginationContainer.innerHTML = "";
+
+            // Previous button
+            let prevButton = document.createElement("button");
+            prevButton.textContent = "Previous";
+            if (currentPage === 1) {
+                prevButton.className = "disabled";
+                prevButton.disabled = true;
+            } else {
+                prevButton.onclick = function () {
+                    showPage(currentPage - 1);
+                };
+            }
+            paginationContainer.appendChild(prevButton);
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                let button = document.createElement("button");
+                button.textContent = i;
+                button.className = (i === currentPage) ? "disabled" : "";
+                button.disabled = (i === currentPage); // Current page button disabled
+                button.onclick = function () {
+                    showPage(i);
+                };
+                paginationContainer.appendChild(button);
+            }
+
+            // Next button
+            let nextButton = document.createElement("button");
+            nextButton.textContent = "Next";
+            if (currentPage === totalPages) {
+                nextButton.className = "disabled";
+                nextButton.disabled = true;
+            } else {
+                nextButton.onclick = function () {
+                    showPage(currentPage + 1);
+                };
+            }
+            paginationContainer.appendChild(nextButton);
+        }
+
+        // Initialize pagination on page load
+        showPage(1);
+
+    </script>
 </body>
 
 </html>

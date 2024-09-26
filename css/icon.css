@@ -118,3 +118,10 @@
     background-color: #f8d7da;
     /* Light red background */
 }
+
+@media (max-width: 740px){
+
+    .card{
+        width: 95%;
+    }
+}
